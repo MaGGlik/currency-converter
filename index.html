@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перевод валют</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>💱 <span>Перевод</span> валют</h1>
+
+    <div class="card">
+      <div class="converter">
+
+        <div class="field">
+          <label>У меня есть</label>
+          <select id="from-currency"></select>
+          <input type="number" id="from-amount" placeholder="0" value="1">
+        </div>
+
+        <button class="swap-btn" onclick="swapCurrencies()" title="Поменять местами">⇅</button>
+
+        <div class="field">
+          <label>Я получу</label>
+          <select id="to-currency"></select>
+          <input type="number" id="to-amount" placeholder="0" readonly>
+        </div>
+
+      </div>
+
+      <div id="rate-info" class="rate-info">Загрузка курса...</div>
+      <div id="update-time" class="update-time"></div>
+    </div>
+
+    <div class="card">
+      <h2>📊 Курсы к рублю</h2>
+      <div id="all-rates" class="all-rates">Загрузка...</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
